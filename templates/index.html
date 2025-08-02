@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rate My Vada 🍩</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #d2691e;
+    }
+    .upload-box {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    input[type="file"] {
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background: #d2691e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vada Perfection Analyzer 🍩</h1>
+  <div class="upload-box">
+    <form id="uploadForm" enctype="multipart/form-data">
+      <input type="file" name="vada_image" accept="image/*" required />
+      <br>
+      <button type="submit">Rate My Vada</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `<p>Analyzing your Vada... 🍩</p>`;
+
+      try {
+        const res = await fetch('/analyze', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          resultDiv.innerHTML = `
+            <h3>✨ VPI-S: ${data.vpi_score.toFixed(2)} / 100</h3>
+            <img src="${data.annotated_image_url}" alt="Annotated Vada Image" />
+            <img src="${data.report_image_url}" alt="Vada Visual Report" />
+          `;
+        } else {
+          resultDiv.innerHTML = `<p style="color:red;">❌ Error: ${data.error}</p>`;
+        }
+      } catch (err) {
+        resultDiv.innerHTML = `<p style="color:red;">❌ Server Error. Please try again.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>

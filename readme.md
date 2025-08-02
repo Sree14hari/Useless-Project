@@ -54,16 +54,20 @@ w_color = 0.29
 
 For Software:
 
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
+- Languages used: Python
+- Frameworks used: PyTorch
+- Libraries used:
+  - OpenCV (opencv-python) for computer vision analysis
+  - Albumentations for data augmentation
+  - NumPy for numerical operations
+  - Visdom for live training visualization
+- Tools used:
+  - Git / GitHub for version control
+  - Visual Studio Code
 For Hardware:
-
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Main components: A PC/Laptop with a dedicated NVIDIA GPU. A camera (e.g., phone camera) to capture images of vadas.
+- Specifications: A CUDA-enabled NVIDIA GPU is required for model training (e.g., NVIDIA GeForce RTX 4050 Laptop GPU).
+- Tools required: Not applicable.
 
 ### Implementation
 

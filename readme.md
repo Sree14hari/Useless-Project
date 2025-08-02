@@ -35,12 +35,13 @@ VPI\_S = (w\_size · S\_size + w\_shape · S\_shape + w\_hole · S\_hole + w\_co
 
 📏 Metric Breakdown
 
-| Metric                | Description                                                                                              |
-| --------------------- | -------------------------------------------------------------------------------------------------------- |
-| **S\<sub\>shape\</sub\>** | Measures how closely the vada's outer boundary matches a perfect circle.                                 |
-| **S\<sub\>hole\</sub\>**  | Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.                     |
-| **S\<sub\>color\</sub\>** | Measures deviation from the perfect golden-brown color using the **CIEDE2000** color-difference formula. |
-| **S\<sub\>size\</sub\>**  | Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.     |
+| Metric               | Description                                                                                                 |
+|----------------------|-------------------------------------------------------------------------------------------------------------|
+| **S<sub>shape</sub>** | Measures how closely the vada's outer boundary matches a perfect circle.                                    |
+| **S<sub>hole</sub>**  | Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.                        |
+| **S<sub>color</sub>** | Measures deviation from the perfect golden-brown color using the **CIEDE2000** color-difference formula.     |
+| **S<sub>size</sub>**  | Penalizes vadas that are too big or too small, using a Gaussian function centered on the ideal diameter.     |
+
 
 🎚️Weight Calibration
 w\_size  = 0.01  

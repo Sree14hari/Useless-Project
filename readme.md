@@ -4,13 +4,12 @@
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: Super Nova
 
 ### Team Members
 
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Sreehari R - Sree Buddha College Of Engineering, Pattoor
+- Member 2:  Abhinav R - Sree Buddha College Of Engineering, Pattoor
 
 ### Project Description
 
@@ -30,6 +29,15 @@ We start by feeding a real-world vada image into a trained CycleGAN model. Actin
 The result? A marked image representing the Vada Perfection that could have been.
 
 The marked image is then passed through a classical Computer Vision module, which extracts four key metrics. These metrics are used to compute the final Vada Perfection Index (VPI<sub>S</sub>) as follows:
+
+VPI_S = (w_size · S_size + w_shape · S_shape + w_hole · S_hole + w_color · S_color) × 100
+
+📏 Metric Breakdown
+Metric Description
+S<sub>shape</sub> Measures how closely the vada's outer boundary matches a perfect circle.
+S<sub>hole</sub> Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.
+S<sub>color</sub> Measures deviation from the perfect golden-brown color using the CIEDE2000 color-difference formula.
+S<sub>size</sub> Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.
 
 ## Technical Details
 

@@ -8,8 +8,8 @@
 
 ### Team Members
 
-- Team Lead: Sreehari R - Sree Buddha College Of Engineering, Pattoor
-- Member 2:  Abhinav R - Sree Buddha College Of Engineering, Pattoor
+  - Team Lead: Sreehari R - Sree Buddha College Of Engineering, Pattoor
+  - Member 2:  Abhinav R - Sree Buddha College Of Engineering, Pattoor
 
 ### Project Description
 
@@ -29,24 +29,24 @@ We start by feeding a real-world vada image into a trained CycleGAN model. Actin
 The result? A marked image representing the Vada Perfection that could have been.
 
 ✨Stage 2: The Scrutinizer (CV + VPI Calculation)
-The marked image is then passed through a classical Computer Vision module, which extracts four key metrics. These metrics are used to compute the final Vada Perfection Index (VPI<sub>S</sub>) as follows:
+The marked image is then passed through a classical Computer Vision module, which extracts four key metrics. These metrics are used to compute the final Vada Perfection Index (VPI\<sub\>S\</sub\>) as follows:
 
-VPI_S = (w_size · S_size + w_shape · S_shape + w_hole · S_hole + w_color · S_color) × 100
+VPI\_S = (w\_size · S\_size + w\_shape · S\_shape + w\_hole · S\_hole + w\_color · S\_color) × 100
 
 📏 Metric Breakdown
 
-| Metric                | Description                                                                                              |
+| Metric                | Description                                                                                              |
 | --------------------- | -------------------------------------------------------------------------------------------------------- |
-| **S<sub>shape</sub>** | Measures how closely the vada's outer boundary matches a perfect circle.                                 |
-| **S<sub>hole</sub>**  | Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.                     |
-| **S<sub>color</sub>** | Measures deviation from the perfect golden-brown color using the **CIEDE2000** color-difference formula. |
-| **S<sub>size</sub>**  | Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.     |
+| **S\<sub\>shape\</sub\>** | Measures how closely the vada's outer boundary matches a perfect circle.                                 |
+| **S\<sub\>hole\</sub\>**  | Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.                     |
+| **S\<sub\>color\</sub\>** | Measures deviation from the perfect golden-brown color using the **CIEDE2000** color-difference formula. |
+| **S\<sub\>size\</sub\>**  | Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.     |
 
 🎚️Weight Calibration
-w_size  = 0.01  
-w_shape = 0.40  
-w_hole  = 0.30  
-w_color = 0.29
+w\_size  = 0.01  
+w\_shape = 0.40  
+w\_hole  = 0.30  
+w\_color = 0.29
 
 ## Technical Details
 
@@ -54,93 +54,89 @@ w_color = 0.29
 
 For Software:
 
-- Languages used: Python
-- Frameworks used: PyTorch
-- Libraries used:
-  - OpenCV (opencv-python) for computer vision analysis
-  - Albumentations for data augmentation
-  - NumPy for numerical operations
-  - Visdom for live training visualization
-- Tools used:
-  - Git / GitHub for version control
-  - Visual Studio Code
+  - Languages used: Python
+  - Frameworks used: PyTorch, Flask
+  - Libraries used:
+      - OpenCV (`opencv-python`) for computer vision analysis
+      - Pillow (PIL) for image manipulation and certificate generation
+      - Albumentations for data augmentation
+      - NumPy for numerical operations
+  - Tools used:
+      - Git / GitHub for version control
+      - Visual Studio Code
+
 For Hardware:
-- Main components: A PC/Laptop with a dedicated NVIDIA GPU. A camera (e.g., phone camera) to capture images of vadas.
-- Specifications: A CUDA-enabled NVIDIA GPU is required for model training (e.g., NVIDIA GeForce RTX 4050 Laptop GPU).
-- Tools required: Not applicable.
+
+  - Main components: A PC/Laptop with a dedicated NVIDIA GPU. A camera (e.g., phone camera) to capture images of vadas.
+  - Specifications: A CUDA-enabled NVIDIA GPU is required for model training (e.g., NVIDIA GeForce RTX 4050 Laptop GPU).
+  - Tools required: Not applicable.
 
 ### Implementation
 
 For Software:
 
-# Installation
+#### Installation
 
-[commands]
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/Sree14hari/Useless-Project.git
+    ```
+2.  **Set up a Virtual Environment:**
+    ```bash
+    # For Windows
+    python -m venv venv
+    venv\Scripts\activate
+    ```
+3.  **Install Dependencies:**
+    ```bash
+    pip install Flask torch torchvision opencv-python Pillow matplotlib
+    ```
 
-# Run
+#### Run
 
-[commands]
+1.  **Start the Backend Server:**
+    ```bash
+    python app.py
+    ```
+2.  **Access the Application:**
+    Open a web browser and navigate to `http://127.0.0.1:5000`.
 
 ### Project Documentation
 
 For Software:
 
-# Screenshots (Add at least 3)
+#### Screenshots 
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1917" height="990" alt="image" src="https://github.com/user-attachments/assets/0de5b698-972d-4e34-887c-3a7b2a55ae65" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1897" height="985" alt="image" src="https://github.com/user-attachments/assets/49ce93ad-848b-4ada-a9c3-ba80bd3e33c5" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1200" height="700" alt="report_2b8a4b29f2bd41bda2b41b1817059ab9" src="https://github.com/user-attachments/assets/68c0be8d-04d3-4ed9-a051-5e1a0dd6a13b" />
 
-# Diagrams
 
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+#### Diagrams
 
-For Hardware:
 
-# Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 
-# Video
+#### Video
 
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://github.com/user-attachments/assets/0d0acf19-0593-4760-ae34-c46289d867f2
 
-# Additional Demos
+#### Additional Demos
 
-[Add any extra demo materials/links]
+
+
+https://github.com/user-attachments/assets/d4f79607-52d5-4537-8e83-4a740e043168
+
+
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+  - **Sreehari R**: Led the backend development, including setting up the Flask server, training the CycleGAN model, and implementing the computer vision logic for VPI calculation.
+  - **Abhinav R**: Designed and developed the main conceptual idea of the project and the frontend user interface, including the HTML structure, all CSS styling and animations, and the JavaScript logic for handling user interaction and displaying results.
 
----
+-----
+
 Made with ❤️ at TinkerHub Useless Projects
-
-![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
-![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)

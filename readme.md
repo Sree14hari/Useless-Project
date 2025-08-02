@@ -58,7 +58,7 @@ For Software:
   - Frameworks used: PyTorch, Flask
   - Libraries used:
       - OpenCV (`opencv-python`) for computer vision analysis
-      - Pillow (PIL) for image manipulation and certificate generation
+      - Pillow (PIL) for image manipulation and report generation
       - Albumentations for data augmentation
       - NumPy for numerical operations
   - Tools used:

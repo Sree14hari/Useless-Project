@@ -1,3 +1,5 @@
 augmented_vadas/
 vada_pics/
 pytorch-CycleGAN-and-pix2pix/
+masked/
+augmented_masked/

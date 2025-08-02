@@ -33,11 +33,14 @@ The marked image is then passed through a classical Computer Vision module, whic
 VPI_S = (w_size · S_size + w_shape · S_shape + w_hole · S_hole + w_color · S_color) × 100
 
 📏 Metric Breakdown
-Metric Description
-S<sub>shape</sub> Measures how closely the vada's outer boundary matches a perfect circle.
-S<sub>hole</sub> Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.
-S<sub>color</sub> Measures deviation from the perfect golden-brown color using the CIEDE2000 color-difference formula.
-S<sub>size</sub> Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.
+
+| Metric                | Description                                                                                              |
+| --------------------- | -------------------------------------------------------------------------------------------------------- |
+| **S<sub>shape</sub>** | Measures how closely the vada's outer boundary matches a perfect circle.                                 |
+| **S<sub>hole</sub>**  | Evaluates the position and roundness of the hole, comparing it with the GAN’s ideal.                     |
+| **S<sub>color</sub>** | Measures deviation from the perfect golden-brown color using the **CIEDE2000** color-difference formula. |
+| **S<sub>size</sub>**  | Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.     |
+
 
 ## Technical Details
 

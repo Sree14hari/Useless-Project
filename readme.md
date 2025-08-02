@@ -28,6 +28,7 @@ We start by feeding a real-world vada image into a trained CycleGAN model. Actin
 
 The result? A marked image representing the Vada Perfection that could have been.
 
+✨Stage 2: The Scrutinizer (CV + VPI Calculation)
 The marked image is then passed through a classical Computer Vision module, which extracts four key metrics. These metrics are used to compute the final Vada Perfection Index (VPI<sub>S</sub>) as follows:
 
 VPI_S = (w_size · S_size + w_shape · S_shape + w_hole · S_hole + w_color · S_color) × 100
@@ -41,6 +42,11 @@ VPI_S = (w_size · S_size + w_shape · S_shape + w_hole · S_hole + w_color · S
 | **S<sub>color</sub>** | Measures deviation from the perfect golden-brown color using the **CIEDE2000** color-difference formula. |
 | **S<sub>size</sub>**  | Penalizes vadas that are too big or small, using a Gaussian function centered on the ideal diameter.     |
 
+🎚️Weight Calibration
+w_size  = 0.01  
+w_shape = 0.40  
+w_hole  = 0.30  
+w_color = 0.29
 
 ## Technical Details
 

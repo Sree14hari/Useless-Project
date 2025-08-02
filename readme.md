@@ -117,6 +117,7 @@ For Software:
 
 #### Diagrams
 
+![DIAGRM](https://github.com/user-attachments/assets/7f290296-77fa-4aea-a0c3-24a35c3cc711)
 
 
 ### Project Demo
